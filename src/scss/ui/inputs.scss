@@ -1,0 +1,70 @@
+.input-group {
+    display: grid;;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem 3.125rem ;
+    margin-top: 2rem;
+    @include resTablet {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+    font-family: 'EuropeCondensedc','Loos Light', sans-serif;
+    
+    input {
+        border: none;
+        outline: none;
+        background-color: $lightBlue;
+        padding: 0.875rem 1.25rem 0.75rem;
+        line-height: 0;
+        font-size: 1.375rem;
+        &:required ~ label:not(.input-error) {
+            &::after {
+                content: " *"
+            }
+        }
+        order: 2;
+    }
+    label {
+        opacity: 0.5;
+        font-size: 1.2rem;
+    }
+    .input-error {
+        order: 3;
+        color: $red
+    }
+    &--red {
+        input {
+            outline: 1px solid $red;
+        }
+        
+    }
+} 
+
+.textarea-item {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+    font-family: 'EuropeCondensedc','Loos Light', sans-serif;
+    textarea {
+        border: none;
+        outline: none;
+        background-color: $lightBlue;
+        padding: 0.875rem 1.25rem 0.75rem;
+        width: 100%;
+        order: 1;
+        font-size: 1.375rem;
+        resize:none;
+        overflow-y: hidden;
+        
+    }
+
+    label {
+        opacity: 0.5;
+        font-size: 1.2rem;
+    }
+}

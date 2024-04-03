@@ -1,0 +1,118 @@
+.option-grid {
+    
+    padding: 1.5rem 0.625rem;
+    position: relative;
+    overflow-y: scroll;
+    max-height: 100%;
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    &__options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 4rem;
+        gap: 2rem 0.75rem;
+        
+    }
+    &__option {
+        aspect-ratio: 1/1;
+        position: relative;
+        border: 1px solid transparent;
+        transition: .3s cubic-bezier(.7,.33,.25,.87);
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $green;
+            .option-grid__button {
+                opacity: 1;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        opacity: 1;
+        pointer-events: none;
+        position: absolute;
+        right: 0.625rem;
+        top: 0.625rem;
+        transition: .3s cubic-bezier(.7,.33,.25,.87);
+        opacity: 0;
+    }
+
+    &__choice {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        .button {
+            padding: 2rem 3rem;
+            font-size: 1.5rem;
+            flex: 1;
+            border: 1px solid black;
+            background-color: transparent;
+            color: black;
+            font-family: 'Loos', sans-serif;
+            &:hover {
+                border: 1px solid $green;
+                background-color: black;
+                border-color: black;
+                color: white;
+            }
+        }
+    }
+
+    &__option-description {
+        padding: 0.5rem;
+        background-color: $veryLightGray;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.5rem;
+    }
+
+    &__option-title {
+        @include paragraphLarge();
+    }
+
+    &__option-price {
+        font-family: 'EuropeCondensedc', 'Loos Light', sans-serif;
+    }
+
+    &__close {
+        width: 2.125rem;
+        height: 2.125rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 0.625rem;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -0.5rem;
+            top: -0.5rem;
+            bottom: -0.5rem;
+            right: -0.5rem;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            svg {
+                path {
+                    stroke: $green;
+                }
+            }
+        }    
+    }
+}

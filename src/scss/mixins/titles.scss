@@ -1,0 +1,22 @@
+@use './media.scss' as m;
+
+@mixin h1 {
+    font-size: 5.1875rem;
+    line-height: 1.2;
+    @include resMobile {
+        font-size: 2.5rem;
+    }
+}
+
+@mixin h2 {
+    font-size: 3.4375rem;
+    line-height: 1;
+    @include resMobile {
+        font-size: 1.75rem;
+    }
+}
+
+@mixin h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+}

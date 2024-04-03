@@ -1,0 +1,45 @@
+//ui
+@import './ui/fonts.scss';
+@import './mixins/main-mixins.scss';
+@import './ui/buttons.scss';
+@import './ui/inputs.scss';
+@import './ui/title.scss';
+
+
+//components
+@import './components/start-page.scss';
+@import './components/default-configuration-card.scss';
+@import './components/preloader.scss';
+@import './components/picture.scss';
+@import './components/pin-layout.scss';
+@import './components/message.scss';
+@import './components/option-grid.scss';
+@import './components/modal-window.scss';
+@import './components/select.scss';
+
+//pages
+@import './pages/main-page.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include paragraphDefault;
+    font-family: 'Loos', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-size: 0.9243212016175621vw;
+    scroll-behavior: smooth;
+    @include resTablet {
+        font-size: 2.083333333333333vw;
+    }
+    @include resMobile {
+        font-size: 16px;
+    }
+}

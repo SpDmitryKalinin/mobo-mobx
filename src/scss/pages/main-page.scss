@@ -1,0 +1,9 @@
+.main-page {
+    display: flex;
+    &__right-side {
+        max-width: 50%;
+        width: 50%;
+        max-height: 100vh;
+        
+    }
+}

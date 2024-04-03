@@ -1,0 +1,42 @@
+@keyframes pulse {
+    0% {
+        //stroke-dasharray: 5 10;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        //stroke-dasharray: 10 10;
+        stroke-dashoffset: -40;
+    }
+}
+
+.message {
+    margin-left: 1.5rem;
+    margin-top: 0.6875rem;
+    &__title {
+        text-transform: uppercase;
+        font-family: 'Loos Light';
+        font-weight: 360;
+    }
+    @include resMobile {
+        margin-top: 7.5rem;
+    }
+    
+    svg {
+        pointer-events: none;
+        transform: translateX(-50%);
+        
+        path:first-child {
+            position: relative;
+            &:hover {
+                stroke: $green;
+                &~ path {
+                    stroke: $green;
+                }
+            }
+            animation: pulse 3s linear infinite;
+        }
+        @include resTablet {
+            display: none;
+        }
+    }
+}

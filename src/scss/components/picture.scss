@@ -1,0 +1,18 @@
+.picture {
+    height: 100vh;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    &__img {
+        &--scale {
+            scale: 1.3;
+        }
+    }
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

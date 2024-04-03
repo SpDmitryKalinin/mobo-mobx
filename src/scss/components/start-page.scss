@@ -1,0 +1,18 @@
+.start-page {
+    @include mainWrapper;
+    width: 100%;
+    text-align: center;
+    &__title {
+        font-weight: 360;
+    }
+    &__subtitle {
+        margin-top: 0.875rem;
+        @include paragraphLarge;
+    }
+    &__card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.375rem 0.75rem;
+        margin-top: 3.75rem;
+    }
+}

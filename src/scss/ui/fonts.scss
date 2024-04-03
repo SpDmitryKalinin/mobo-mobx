@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Loos';
+    font-style: normal;
+    src: 
+    url('./../../assets/fonts/LoosLatinRegularWeb.ttf'),
+    url('./../../assets/fonts/LoosLatinRegularWeb.woff2'),
+    url('./../../assets/fonts/LoosLatinRegularWeb.woff'),
+}
+
+@font-face {
+    font-family: 'Loos Light';
+    font-style: light;
+    src:
+    url('./../../assets/fonts/LoosLatinLightWeb.ttf'),
+    url('./../../assets/fonts/LoosLatinLightWeb.woff2'),
+    url('./../../assets/fonts/LoosLatinLightWeb.woff'),
+}
+
+@font-face {
+    font-family: 'EuropeCondensedc';
+    src: url('./../../assets/fonts/EUROPECONDENSEDC.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'DrukTextCy';
+    src: url('./../../assets/fonts/DrukTextCy.otf') format("opentype");
+}

@@ -1,0 +1,26 @@
+@use './media.scss' as m;
+
+@mixin paragraphDefault {
+    font-size: 1.125rem;
+    letter-spacing: 0.02em;
+    line-height: 1.19;
+    @include resMobile {
+        font-size: 0.9375rem;
+    }
+}
+
+@mixin paragraphLarge {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    @include resMobile {
+        font-size: 1.125rem;
+    }
+}
+
+@mixin paragraphBig {
+    font-size: 2.25rem;
+    line-height: 1;
+    @include resMobile {
+        font-size: 1.5rem
+    }
+}
